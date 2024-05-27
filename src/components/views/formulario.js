@@ -12,7 +12,7 @@ const Formulario = ({ formData, handleChange, handleSubmit }) => {
   useEffect(() => {
     const fetchDepartamentos = async () => {
       try {
-        const response = await axios.get("http://localhost:3009/api/departamentos");
+        const response = await axios.get("http://localhost:3009/api/utils/departamentos");
         setDepartamentos(response.data);
       } catch (error) {
         console.error("Error al obtener los departamentos:", error);
@@ -22,7 +22,7 @@ const Formulario = ({ formData, handleChange, handleSubmit }) => {
 
     const fetchNivelAlcanzado = async () => {
       try {
-        const response = await axios.get("http://localhost:3009/api/nivelesAlcanzados");
+        const response = await axios.get("http://localhost:3009/api/utils/nivelesAlcanzados");
         setNivelAlcanzado(response.data);
       } catch (error) {
         console.error("Error al obtener los niveles alcanzados:", error);

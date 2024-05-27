@@ -10,7 +10,7 @@ const VistaPostulantes = () => {
     const fetchPostulantes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3009/api/postulantes"
+          "http://localhost:3009/api/postulaciones"
         );
         setPostulantes(response.data);
       } catch (error) {

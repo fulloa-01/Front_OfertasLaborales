@@ -47,7 +47,7 @@ const IngresaCV = () => {
   useEffect(() => {
     const fetchCarreras = async () => {
       try {
-        const response = await axios.get("http://localhost:3009/api/carrera");
+        const response = await axios.get("http://localhost:3009/api/utils/carreras");
         setCarreras(response.data);
       } catch (error) {
         console.error("Error al obtener las carreras:", error);
@@ -57,7 +57,7 @@ const IngresaCV = () => {
 
     const fetchTipoDibujante = async () => {
       try {
-        const response = await axios.get("http://localhost:3009/api/tipoDibujante");
+        const response = await axios.get("http://localhost:3009/api/utils/tipoDibujante");
         setTipoDibujante(response.data);
       } catch (error) {
         console.error("Error al obtener los tipos de dibujante:", error);
@@ -67,7 +67,7 @@ const IngresaCV = () => {
 
     const fetchTipoInstitucion = async () => {
       try {
-        const response = await axios.get("http://localhost:3009/api/tipoInstitucion");
+        const response = await axios.get("http://localhost:3009/api/utils/tipoInstitucion");
         setTipoInstitucion(response.data);
       } catch (error) {
         console.error("Error al obtener los tipos de institución:", error);
@@ -77,7 +77,7 @@ const IngresaCV = () => {
 
     const fetchNivelAlcanzado = async () => {
       try {
-        const response = await axios.get("http://localhost:3009/api/nivelesAlcanzados");
+        const response = await axios.get("http://localhost:3009/api/utils/nivelesAlcanzados");
         setNivelAlcanzado(response.data);
       } catch (error) {
         console.error("Error al obtener los niveles alcanzados:", error);
@@ -87,7 +87,7 @@ const IngresaCV = () => {
 
     const fetchUniversidad = async () => {
       try {
-        const response = await axios.get("http://localhost:3009/api/universidades");
+        const response = await axios.get("http://localhost:3009/api/utils/universidades");
         setUniversidad(response.data);
       } catch (error) {
         console.error("Error al obtener las universidades:", error);
