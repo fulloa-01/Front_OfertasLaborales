@@ -1,0 +1,16 @@
+.container-fluid {
+    height: 100vh;
+  }
+  
+  .bg-overlay {
+    background-blend-mode: multiply;
+    background-color: rgba(255, 0, 0, 0.6); /* Red with 60% opacity */
+    color: white;
+    text-align: center;
+  }
+  
+  .bg-overlay h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  

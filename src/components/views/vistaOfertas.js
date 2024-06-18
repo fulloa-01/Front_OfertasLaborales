@@ -21,45 +21,51 @@ const VistaOfertas = () => {
         fetchOfertas();
     }, []);
 
-    
     const handlePostular = (codigoOferta) => {
         navigate('/ingresa-cv', { state: { codigoOferta } });
     };
 
     return (
         <div className="container mt-5">
-            <h2 className="mb-4">Ofertas Laborales</h2>
-            <button className="btn btn-danger mb-3" onClick={() => navigate('/ingresa-cv')}>Subir Currículum</button>
-            <table className="table table-striped table-hover">
-                <thead className="table-dark">
-                    <tr>
-                        <th>Código</th>
-                        <th>Cargo</th>
-                        <th>Detalle</th>
-                        <th>Ubicación</th>
-                        <th>Gerencia</th>
-                        <th>Vacantes</th>
-                        <th>Postulación</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {ofertas.map(oferta => (
-                        <tr key={oferta.OfertaID}>
-                            <td>{oferta.OfertaID}</td>
-                            <td>{oferta.Titulo}</td>
-                            <td>{oferta.Detalle}</td>
-                            <td>{oferta.UbicacionGeografica}</td>
-                            <td>{oferta.Departamento}</td>
-                            <td>{oferta.Vacantes}</td>
-                            <td>
-                            <button className="btn btn-danger mb-3" 
-                                onClick={() => handlePostular(oferta.OfertaID)}>Postular
-                            </button>
-                            </td>
+            <h2 className="mb-4 text-center">Ofertas Laborales</h2>
+            <div className="d-flex justify-content-center mb-4">
+                <button className="btn btn-danger" onClick={() => navigate('/ingresa-cv')}>Subir Currículum</button>
+            </div>
+            <div className="table-responsive">
+                <table className="table table-striped table-hover">
+                    <thead className="table-dark">
+                        <tr>
+                            <th>Código</th>
+                            <th>Cargo</th>
+                            <th>Detalle</th>
+                            <th>Ubicación</th>
+                            <th>Gerencia</th>
+                            <th>Vacantes</th>
+                            <th>Postulación</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {ofertas.map(oferta => (
+                            <tr key={oferta.OfertaID}>
+                                <td>{oferta.OfertaID}</td>
+                                <td>{oferta.Titulo}</td>
+                                <td>{oferta.Detalle}</td>
+                                <td>{oferta.UbicacionGeografica}</td>
+                                <td>{oferta.Departamento}</td>
+                                <td>{oferta.Vacantes}</td>
+                                <td>
+                                    <button 
+                                        className="btn btn-danger" 
+                                        onClick={() => handlePostular(oferta.OfertaID)}
+                                    >
+                                        Postular
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

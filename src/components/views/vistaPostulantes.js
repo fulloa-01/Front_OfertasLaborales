@@ -23,7 +23,6 @@ const VistaPostulantes = () => {
   }, []);
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
       <div className="container mt-5">
         <h2 className="mb-4">Postulantes</h2>
         <table className="table table-striped table-hover">
@@ -33,19 +32,14 @@ const VistaPostulantes = () => {
               <th>Nombre</th>
               <th>Apellido Paterno</th>
               <th>Apellido Materno</th>
-              <th>Correo</th>
               <th>Ciudad</th>
               <th>Código Oferta</th>
               <th>Carrera</th>
-              <th>Experiencia Docente</th>
-              <th>Tipo Institución</th>
               <th>Nivel Alcanzado</th>
               <th>Universidad</th>
               <th>Años Experiencia</th>
               <th>Último Cargo</th>
               <th>Última Actividad</th>
-              <th>Penúltimo Cargo</th>
-              <th>Penúltima Actividad</th>
               <th>CV URL</th>
             </tr>
           </thead>
@@ -56,19 +50,14 @@ const VistaPostulantes = () => {
                 <td>{postulante.Nombre}</td>
                 <td>{postulante.ApellidoPaterno}</td>
                 <td>{postulante.ApellidoMaterno}</td>
-                <td>{postulante.Email}</td>
                 <td>{postulante.Ciudad}</td>
                 <td>{postulante.CodigoOferta}</td>
                 <td>{postulante.CarreraNombre}</td>
-                <td>{postulante.ExperienciaDocente}</td>
-                <td>{postulante.Institucion}</td>
                 <td>{postulante.NivelAlcanzado}</td>
                 <td>{postulante.UniversidadNombre}</td>
                 <td>{postulante.AnosExperiencia}</td>
                 <td>{postulante.UltimoCargo}</td>
                 <td>{postulante.UltimaActividad}</td>
-                <td>{postulante.PenultimoCargo}</td>
-                <td>{postulante.PenultimaActividad}</td>
                 <td>
                   <a
                     href={postulante.CvURL}
@@ -83,7 +72,6 @@ const VistaPostulantes = () => {
           </tbody>
         </table>
       </div>
-    </div>
   );
 };
 
